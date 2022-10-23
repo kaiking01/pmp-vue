@@ -1,0 +1,131 @@
+$number: 20;
+
+// fs font-size @for 常用文字大小设置
+// @for $i from 0 through $number {
+//   $distance: (2*$i);
+//   $fs: $distance+$number;
+//   $name: $fs;
+
+//   .fs#{$name} {
+//     font-size:#{$fs}px !important;
+//   }
+// }
+
+// mg margin @for
+@for $i from 0 through $number {
+  $distance: (5 * $i);
+  $name: $distance;
+
+  .mg-#{$name} {
+    margin: #{$distance}px !important;
+  }
+}
+
+// mg-t margin-top @for
+@for $i from 0 through $number {
+  $distance: (1 * $i);
+  $name: $distance;
+
+  @if ($i>0 && $i<=5) {
+    .mg-t#{$name} {
+      margin-top: #{$distance}px !important;
+    }
+  }
+
+  $distance: (5 * $i);
+  $name: $distance;
+
+  .mg-t#{$name} {
+    margin-top: #{$distance}px !important;
+  }
+}
+
+// mg-b margin-bottom @for
+@for $i from 0 through $number {
+  $distance: (5 * $i);
+  $name: $distance;
+
+  .mg-b#{$name} {
+    margin-bottom: #{$distance}px !important;
+  }
+}
+
+// mg-l margin-left @for
+@for $i from 0 through $number {
+  $distance: (5 * $i);
+  $name: $distance;
+
+  .mg-l#{$name} {
+    margin-left: #{$distance}px !important;
+  }
+}
+
+// mg-r margin-right @for
+@for $i from 0 through $number {
+  $distance: (5 * $i);
+  $name: $distance;
+
+  .mg-r#{$name} {
+    margin-right: #{$distance}px !important;
+  }
+}
+
+// pd padding @for
+@for $i from 0 through $number {
+  $distance: (5 * $i);
+  $name: $distance;
+
+  .pd-#{$name} {
+    padding: #{$distance}px !important;
+  }
+}
+
+// pd-t padding-top @for
+@for $i from 0 through $number {
+  $distance: (5 * $i);
+  $name: $distance;
+
+  .pd-t#{$name} {
+    padding-top: #{$distance}px !important;
+  }
+}
+
+// pd-b padding-bottom @for
+@for $i from 0 through $number {
+  $distance: (5 * $i);
+  $name: $distance;
+
+  .pd-b#{$name} {
+    padding-bottom: #{$distance}px !important;
+  }
+}
+
+// pd-l padding-left @for
+@for $i from 0 through $number {
+  $distance: (5 * $i);
+  $name: $distance;
+
+  .pd-l#{$name} {
+    padding-left: #{$distance}px !important;
+  }
+}
+
+// pd-r padding-right @for
+@for $i from 0 through $number {
+  $distance: (5 * $i);
+  $name: $distance;
+
+  .pd-r#{$name} {
+    padding-right: #{$distance}px !important;
+  }
+}
+
+// font-size @for
+@for $i from 0 through $number {
+  $distance: (10+2 * $i);
+  $name: $distance;
+
+  .fs-#{$name} {
+    font-size: #{$distance}px !important;
+  }
+}

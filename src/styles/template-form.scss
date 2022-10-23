@@ -1,0 +1,455 @@
+// form元素模板样式
+// 自动渲染表单使用
+
+@import '~@/styles/variables.scss';
+
+.drawer-dialog,
+.form-row-template {
+  margin-top: 30px;
+
+  .title {
+    $titH: 36px;
+    height: $titH;
+    line-height: $titH;
+
+    &:before {
+      position: relative;
+      z-index: 4;
+      content: '';
+      padding-right: 6px;
+      border-left: 3px solid var(--mainColor);
+    }
+
+    .txt {
+      position: relative;
+      z-index: 5;
+      display: inline-block;
+      font-size: 14px;
+      background: #fff;
+
+      &.txt-l {
+        padding-right: 8px;
+      }
+
+      &.txt-r {
+        position: absolute;
+        right: 0;
+        padding-left: 8px;
+      }
+    }
+
+    &.line-through {
+      width: 100%;
+
+      &:after {
+        position: absolute;
+        left: 0;
+        top: 16px;
+        z-index: 1;
+        content: '';
+        width: 100%;
+        height: 1px;
+        background-color: $borderColor;
+      }
+    }
+  }
+
+  .el-form.form-module {
+    .el-form-item {
+      $itemH: 40px;
+      position: relative;
+      padding: 0;
+      width: 100%;
+      min-height: $itemH;
+      box-sizing: content-box;
+
+      // > label {
+      //   font-weight: normal;
+      // }
+
+      // 评分
+      .el-rate {
+        height: $itemH;
+        line-height: $itemH;
+
+        .el-rate__item {
+          vertical-align: initial;
+        }
+      }
+
+      .space-val-box {
+        min-height: 32px;
+      }
+
+      // 表单 底部提示
+      .tip-box {
+        $tipBoxH: 20px;
+        // position: absolute;
+        // bottom: -20px;
+        width: 100%;
+        // height: $tipBoxH;
+        line-height: $tipBoxH;
+        font-size: 12px;
+        // text-overflow: ellipsis;
+        // overflow: hidden;
+        // white-space: nowrap;
+        color: #9c9a9c;
+        background: none;
+
+        .a-label {
+          font-weight: bold;
+          transition: color 0.2s ease-in;
+        }
+      }
+
+      .unit-cls1 {
+        padding-left: 2px;
+        line-height: 1;
+      }
+
+      .add-circle-btn {
+        $circleWH: 26px;
+        position: absolute;
+        bottom: 2px;
+        right: -36px;
+        display: inline-block;
+        width: $circleWH;
+        height: $circleWH;
+        line-height: $circleWH;
+        text-align: center;
+        color: #80848f;
+        font-size: 24px;
+        cursor: pointer;
+        border-radius: 50%;
+        border: 1px solid #80848f;
+        transition: color 0.2s ease-in;
+
+        &:hover {
+          color: var(--primaryColor);
+          border-color: var(--primaryColor);
+        }
+      }
+    }
+  }
+}
+
+.drawer-dialog {
+  margin-top: 0;
+  // max-width: 98%;
+  $drawerH: 50px;
+
+  .el-drawer__container {
+    .el-drawer {
+      .el-drawer__header {
+        padding: 22px 8px;
+      }
+
+      .el-drawer__body {
+        padding-bottom: 70px;
+        overflow: hidden;
+        overflow-y: auto;
+
+        .edit-form-container {
+          height: calc(100% - 100px);
+        }
+
+        .form-module {
+          margin: 0 auto;
+          margin-top: 10px;
+          padding-bottom: 4px;
+          // padding-bottom: $drawerH;
+          // width     : 70%;
+          // height        : calc(100% - #{$drawerH});
+          overflow: hidden;
+          overflow-y: auto;
+
+          .el-row {
+            margin: 0 auto;
+            width: 98%; // 90%;
+          }
+        }
+
+        .opration-box {
+          .opration-wrap {
+            .el-button {
+              padding: 10px 30px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.dialog-box {
+  .el-dialog {
+    .el-dialog__header {
+      padding: 10px;
+      // cursor: move;
+      border-bottom: 1px solid $borderColor;
+
+      .el-dialog__headerbtn {
+        top: 12px;
+      }
+    }
+
+    .el-dialog__body {
+      margin: 0 auto;
+      padding: 10px 20px 60px 20px;
+      width: 96%;
+      overflow: hidden;
+      overflow-y: auto;
+      max-height: calc(100vh - 14vh);
+      width: 100%;
+      @extend .scroll-bar;
+
+      .form-module {
+        height: 100%;
+
+        .wrap {
+          margin: 0 auto;
+          width: 96%;
+        }
+      }
+
+      .opration-box {
+        justify-content: flex-end;
+        box-shadow: 0 -1px 1px $borderColor;
+
+        .opration-wrap {
+          margin: 0 auto;
+          width: 98%;
+          // margin: 0;
+          // padding-right: 14px;
+
+          .el-button {
+            padding: 10px 30px;
+          }
+        }
+      }
+    }
+  }
+}
+
+// .drawer-box {
+//   .el-drawer__body {
+//     padding-bottom: 70px;
+//     overflow      : hidden;
+
+//     .edit-form-container {
+//       height    : calc(100% - 55px);
+//       overflow  : hidden;
+//       overflow-y: auto;
+//     }
+//   }
+// }
+
+.dialog-box.no-form-btn-line {
+  .el-dialog .el-dialog__body {
+    padding-bottom: 60px;
+  }
+}
+
+// 编辑状态 提示语的隐藏与显示
+.el-form.form-module {
+  .editting {
+    .el-form-item {
+      .el-form-item__error {
+        display: inline-block;
+      }
+    }
+  }
+
+  .no-edit {
+    .el-form-item {
+      .el-form-item__error {
+        display: none;
+      }
+    }
+  }
+}
+
+// 模板form表单样式 表单 非编辑状态
+.edit-form-box .template-form-module {
+  .el-form-item {
+    margin-bottom: 4px;
+  }
+}
+
+// 模板form表单样式 编辑状态
+.activeEditClass > .template-form-module {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  &.form-size-media .el-form-item {
+    min-height: 58px;
+  }
+  &.form-size-small .el-form-item {
+    min-height: 50px;
+  }
+  &.form-size-mini .el-form-item {
+    min-height: 50px;
+  }
+
+  .el-form-item {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 0;
+    width: 100%;
+    min-height: 50px;
+    overflow: hidden;
+
+    // > label {
+    //   font-weight: normal;
+    // }
+
+    .el-form-item__content {
+      min-height: 34px;
+      line-height: 34px;
+    }
+
+    // 表单 底部提示
+    .tip-box {
+      $tipBoxH: 22px;
+      position: absolute;
+      bottom: -20px;
+      width: 100%;
+      height: $tipBoxH;
+      line-height: $tipBoxH;
+      font-size: 12px;
+
+      .a-label {
+        font-weight: bold;
+        transition: color 0.2s ease-in;
+      }
+    }
+
+    .add-circle-btn {
+      $circleWH: 26px;
+      position: absolute;
+      bottom: 2px;
+      right: -36px;
+      display: inline-block;
+      width: $circleWH;
+      height: $circleWH;
+      line-height: $circleWH;
+      text-align: center;
+      color: #80848f;
+      font-size: 24px;
+      cursor: pointer;
+      border-radius: 50%;
+      border: 1px solid #80848f;
+      transition: color 0.2s ease-in;
+
+      &:hover {
+        color: var(--primaryColor);
+        border-color: var(--primaryColor);
+      }
+    }
+
+    .form-switch-box {
+      width: 46px;
+    }
+  }
+}
+
+.edit-common-table,
+.keyin-body-form-item {
+  // 输入有误提示
+  &.form-input-box {
+    display: inline-block;
+    &.err-tip1 {
+      .el-input__inner {
+        border: 1px solid #f00;
+        background-color: none;
+      }
+    }
+  }
+
+  // 值变化
+  &.change-cls {
+    .label-box-cls, // select-dept
+    .el-input__count,
+    > textarea,
+    .el-input__inner {
+      background-color: #f9f9d0;
+    }
+  }
+
+  .el-switch {
+    .el-switch__core {
+      width: 100% !important;
+      // &:after {
+      //   margin-left: -22px !important;
+      // }
+    }
+  }
+}
+
+// 表单值变化+校验样式
+.form-tip-error1947 {
+  .el-input__inner {
+    border: 1px solid #f00 !important;
+    background-color: none !important;
+  }
+}
+
+.form-change1947 {
+  // &.el-radio-group,
+  .space-val-box,
+  .el-cascader__search-input,
+  .label-box-cls, // select-dept
+  .el-input__count,
+  > textarea,
+  .el-range-input,
+  .el-input__inner {
+    background-color: #f9f9d0;
+  }
+}
+.el-radio-group.form-change1947,
+.el-date-editor.form-change1947,
+.form-space-container.form-change1947 {
+  background-color: #f9f9d0 !important;
+}
+.select-box--media {
+  line-height: 38px;
+}
+.select-box--small {
+  line-height: 29px;
+}
+.select-box--mini {
+  line-height: 28px;
+}
+.edit-form-box.activeEditClass {
+  .template-form-module.form-size-media {
+    .select-box--media {
+      line-height: 38px;
+    }
+  }
+  .template-form-module.form-size-small {
+    .select-box--small {
+      line-height: 29px;
+    }
+  }
+  .template-form-module.form-size-mini {
+    .select-box--mini {
+      line-height: 36px;
+    }
+  }
+}
+.template-form-module.form-size-media {
+  .select-box--media {
+    line-height: 38px;
+  }
+}
+.template-form-module.form-size-small {
+  .select-box--small {
+    line-height: 32px;
+  }
+}
+.template-form-module.form-size-mini {
+  .select-box--mini {
+    line-height: 30px;
+  }
+}

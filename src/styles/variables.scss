@@ -1,0 +1,141 @@
+// css 变量
+/**
+z-index:
+el-message:3000
+tabs-box: 2100
+*/
+// z-index:
+$loadingZindex: 3100;
+$elMeassageZindex: 3000;
+$dialogBottomBarZindex: 2200; // 弹窗底部操作栏，因为 UEditor 默认时2100起步，必须高于2100
+$tabsBoxZindex: 2100; // 要同时适配 下拉框+dialog弹窗（案例：add-employee/addEmployee）
+$tabsBoxZindex1: 2000; // 弹窗出现时候，用这个
+
+$haderH: 120px;
+$navH: 55px;
+$headerH: 60px;
+$headerH1: 34px; // 面包屑高度
+$breadcrumb: 0; //  $headerH1; // 面包屑高度（面包屑如今已屏蔽 2022.9.2）
+$headerOutH: $headerH + $breadcrumb + 20px; // 20是app-container的padding
+$sliderW: 180px;
+$sliderColoseW: 36px; // 折叠后的宽度
+$sliderW1: 34px;
+$sliderItemH: 36px;
+$iconUrl: '../../static/img/icon';
+$imgUrl: '../../static/img';
+
+$blue: #324157;
+$light-blue: #3a71a8;
+$red: #c03639;
+$pink: #e65d6e;
+$green: #30b08f;
+$tiffany: #4ab7bd;
+$yellow: #fec171;
+$panGreen: #30b08f;
+
+$mainColor: #2789ee;
+$seccondColor: #44c4ff;
+$thirdColor: #a1daf5;
+$fourColor: #203764;
+$primaryColor: #60a6f6;
+$successColor: #67c23a;
+$infoColor: #909399;
+$warningColor: #e6a23c;
+$dangerColor: #f56c6c;
+
+// 勿删！！
+// test系的颜色，存于constant.js，用于配置统计图，放在这里只是为了方便查看颜色
+// $test1: #60a6f6;
+// $test2: #e6a23c;
+// $test3: #3ac2b7;
+// $test4: #e29061;
+// $test5: #51a36d;
+// $test6: #f56c6c;
+// $test7: #859900;
+// $test8: #6c71c4;
+// $test9: #93a1a1;
+// $test10: #e9e2cb;
+// $test11: #0996b3;
+// $test12: #e45649;
+// $test13: #259185;
+
+$editFormBgColor: #f8fafd;
+$activeColor: $mainColor;
+$bgColor: #f8f8f8;
+$bgGrey: #f2f2f2;
+$borderColor: #e6e6e4;
+
+//sidebar
+$menuBg: $bgGrey;
+$subMenuBg: #fff;
+$menuHover: #efefef;
+$menuText: #fff;
+$menuActiveText: $bgColor;
+// $subMenuActiveText: #f4f4f5; // https://github.com/ElemeFE/element/issues/12951
+$subMenuHover: #001528;
+// $sideBarWidth        : 210px;
+
+// //table
+$tableHeaderColor: #f8f8f9; // the :export directive is the magic sauce for webpack
+
+// element-ui/el-table
+// $elTableSelectedBg: #c9d895;
+$elTableSelectedBg: #ecf5ff;
+$--color-primary: teal;
+// https://www.bluematador.com/blog/how-to-share-variables-between-js-and-sass
+// eslint-disable-next-line
+:export {
+  maincolor: $mainColor;
+  menutext: $menuText;
+  menuactivetext: $menuActiveText;
+  fourcolor: $fourColor;
+  // subMenuActiveText: $subMenuActiveText;
+  menubg: $menuBg;
+  menuhover: $menuHover;
+  submenubg: $subMenuBg;
+  submenuhover: $subMenuHover;
+  sliderw: $sliderW;
+  sliderw1: $sliderW1;
+  eltableselectedbg: $elTableSelectedBg;
+}
+
+/*滚动条样式 设置样式滚动条，会导致设置fixed的el-table样式出错错位 */
+.scroll-bar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.scroll-bar-h0::-webkit-scrollbar {
+  width: 0px;
+}
+
+.scroll-bar::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.scroll-bar::-webkit-scrollbar-track {
+  // border-radius: 0;
+  background: rgba(0, 0, 0, 0.1);
+}
+
+// y轴滚动
+.over-y-auto {
+  overflow: hidden;
+  overflow-y: auto;
+}
+
+.custom-iconfont {
+  font-family: 'iconfont' !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+//不换行，溢出部分变为省略号
+.no-wrap {
+  /*这就是省略号喽*/
+  text-overflow: ellipsis;
+  overflow: hidden;
+  /*设置不断行*/
+  white-space: nowrap;
+}

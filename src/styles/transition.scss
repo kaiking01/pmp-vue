@@ -1,0 +1,133 @@
+//globl transition css
+
+/*fade*/
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.28s;
+}
+
+.fade-enter,
+.fade-leave-active {
+  opacity: 0;
+}
+
+/*fade-transform*/
+.fade-transform-leave-active,
+.fade-transform-enter-active {
+  transition: all .5s;
+}
+
+.fade-transform-enter {
+  opacity  : 0;
+  transform: translateX(-30px);
+}
+
+.fade-transform-leave-to {
+  opacity  : 0;
+  transform: translateX(30px);
+}
+
+/*breadcrumb transition*/
+.breadcrumb-enter-active,
+.breadcrumb-leave-active {
+  transition: all .5s;
+}
+
+.breadcrumb-enter,
+.breadcrumb-leave-active {
+  opacity  : 0;
+  transform: translateX(20px);
+}
+
+.breadcrumb-move {
+  transition: all .5s;
+}
+
+.breadcrumb-leave-active {
+  position: absolute;
+}
+
+/*fade of right to left*/
+// .fade-rl-leave-active,
+// .fade-rl-enter-active {
+//   transition: all .5s;
+// }
+
+// .fade-rl-enter {
+//   opacity  : 0;
+//   transform: translateX(40px);
+// }
+
+// .fade-rl-leave-to {
+//   opacity  : 0;
+//   transform: translateX(0px);
+// }
+.fade-rl-enter-active,
+.fade-rl-enter-active {
+  transition: all .5s;
+}
+
+// enter
+.fade-rl-enter {
+  opacity  : 0;
+  transform: translateX(40px);
+}
+
+.fade-rl-enter-to {
+  opacity: 1;
+}
+
+// leave
+.fade-rl-leave {
+  // opacity  : 1;
+  transform: translateX(0px);
+}
+
+.fade-rl-leave-to {
+  opacity  : 1;
+  transform: translateX(40px);
+}
+
+
+/*fade in-out*/
+.fade-inOut-leave-active,
+.fade-inOut-enter-active {
+  opacity   : 1;
+  transition: all .5s;
+}
+
+.fade-inOut-enter {
+  opacity  : 0;
+  transform: translateX(10px);
+}
+
+.fade-inOut-leave-to {
+  opacity  : 0;
+  transform: translateX(0px);
+}
+
+/*fade in-out*/
+.fade11-leave-active,
+.fade11-enter-active {
+  opacity   : 1;
+  transition: all .5s;
+}
+
+.fade11-enter {
+  opacity  : 0;
+  height   : 42px;
+  transform: translateX(10px);
+}
+
+.fade11-enter-to {
+  opacity     : 0;
+  height      : 42px;
+  // height   : auto;
+  transform   : translateX(10px);
+}
+
+.fade11-leave-to {
+  opacity  : 0;
+  height   : 120px;
+  transform: translateX(0px);
+}

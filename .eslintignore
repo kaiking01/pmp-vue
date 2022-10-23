@@ -1,0 +1,7 @@
+build/*.js
+config/*.js
+src/assets
+vscode-setting.json
+node_modules
+*postcssrc
+static/UEditor/

@@ -1,0 +1,100 @@
+/ eslint-disable /
+// 将设置放入此文件中以覆盖默认设置
+{
+	"editor.fontSize": 14,
+	"workbench.statusBar.visible": true,
+	"workbench.sideBar.location": "left",
+	"terminal.integrated.shell.windows": "C:\\WINDOWS\\Sysnative\\cmd.exe",
+	"editor.tabSize": 2,
+	/** Easy Sass 插件 
+        format:
+            nested：嵌套缩进的 css 代码。
+            expanded：没有缩进的、扩展的css代码。
+            compact：简洁格式的 css 代码。
+            compressed：压缩后的 css 代码。
+    **/
+	// "easysass.formats": [
+	//     {
+	//         "format": "expanded",
+	//         "extension": ".wxss" // 可改成 .css,.wxss
+	//     }
+	// ],
+	"editor.minimap.enabled": true,
+	"editor.renderControlCharacters": false,
+	"editor.renderWhitespace": "none",
+	"easysass.targetDir": "./css/",
+	"diffEditor.ignoreTrimWhitespace": true,
+	"git.path": "C:/Users/lenovo/AppData/Local/Programs/Git/mingw64/bin/git.exe",
+	"editor.formatOnPaste": true,
+	"editor.formatOnSave": true, // 不自动保存
+	"eslint.autoFixOnSave": true, // 每次保存的时候将代码按eslint格式进行修复
+	"editor.formatOnType": true,
+	"breadcrumbs.enabled": false,
+	"workbench.activityBar.visible": true,
+	"window.menuBarVisibility": "default",
+	"workbench.view.alwaysShowHeaderActions": true,
+	"terminal.integrated.rendererType": "dom",
+	"workbench.startupEditor": "newUntitledFile",
+	"files.associations": {
+		"*.cjson": "jsonc",
+		"*.wxss": "css",
+		"*.wxs": "javascript",
+		"*.mpx": "vue",
+		"*.groovy": "shellscript"
+	},
+	"emmet.includeLanguages": {
+		"wxml": "html"
+	},
+	"minapp-vscode.disableAutoConfig": true,
+	"git.autofetch": true,
+	"[html]": {
+		"editor.defaultFormatter": "vscode.html-language-features"
+	},
+	"[javascript]": {
+		"editor.defaultFormatter": "vscode.typescript-language-features"
+	},
+	"[css|scss]": {
+		"editor.defaultFormatter": "michelemelluso.code-beautifier"
+	},
+	"git.enableSmartCommit": true,
+	"emmet.showSuggestionsAsSnippets": true,
+	"editor.snippetSuggestions": "top", // 自定义css输出文件路径
+	"prettier.eslintIntegration": true, //让prettier使用eslint的代码格式进行校验
+	"prettier.semi": false, //去掉代码结尾的分号
+	"prettier.singleQuote": true, //使用带引号替代双引号
+	"javascript.format.insertSpaceBeforeFunctionParenthesis": true, //让函数(名)和后面的括号之间加个空格
+	// "vetur.format.defaultFormatter.html": "js-beautify-html", //格式化.vue中html
+	"vetur.format.defaultFormatterOptions": {
+		"js-beautify-html": {
+			"wrap_attributes": "aligned-multiple"
+		},
+		"prettier": {
+			"semi": false,
+			"singleQuote": true
+		},
+		"prettyhtml": {
+			"printWidth": 10,
+			"singleQuote": false,
+			"wrapAttributes": false,
+			"sortAttributes": false
+		}
+	},
+	"vetur.format.defaultFormatter.html": "js-beautify-html",
+	"vetur.format.defaultFormatter.js": "vscode-typescript", //让vue中的js按编辑器自带的ts格式进行格式化
+	"semi": false,
+	"update.enableWindowsBackgroundUpdates": false,
+	"update.showReleaseNotes": false,
+	"update.mode": "none",
+	"editor.suggestSelection": "first",
+	"vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+	"[vue]": {
+		"editor.defaultFormatter": "octref.vetur"
+	},
+	"git.confirmSync": false,
+	"workbench.colorTheme": "Visual Studio Light", //指定工作台中使用的颜色主题
+	"search.followSymlinks": false,
+	"editor.codeActionsOnSave": {
+		"source.fixAll.eslint": true
+	} // //关闭rg.exe进程
+}
+/ eslint-enable /
