@@ -5,9 +5,9 @@
 const path = require('path')
 // const ipFile = require('../build/ip')
 
-let buildFileName = 'dist'
+let buildFileName = 'docs'
 if (process.env.env_config === 'sit') {
-  buildFileName = 'dist'
+  buildFileName = 'docs'
 }
 console.log('buildFileName-------', buildFileName)
 module.exports = {

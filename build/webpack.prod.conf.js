@@ -64,7 +64,7 @@ const webpackConfig = merge(baseWebpackConfig, {
       template: 'index.html',
       inject: true,
       // favicon: resolve('favicon.ico'),
-      title: '全优绩效云平台',
+      title: 'pmp-statistics',
       templateParameters: {
         BASE_URL: config.build.assetsPublicPath + config.build.assetsSubDirectory,
       },
@@ -225,7 +225,7 @@ if (isProd) {
           // ],
           archive: [
             // { source: buildFileName, destination: buildFileName + '.zip' }, //需要压缩的资源
-            { source: './dist', destination: 'dist.zip' }, //需要压缩的资源
+            { source: './docs', destination: 'docs.zip' }, //需要压缩的资源
           ],
           // delete: [buildFileName],
         }
