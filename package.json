@@ -43,7 +43,6 @@
   "dependencies": {
     "axios": "0.18.0",
     "babel-polyfill": "^6.26.0",
-    "crypto-js": "^4.0.0",
     "default-passive-events": "^2.0.0",
     "echarts": "^4.8.0",
     "element-ui": "~2.13.2",

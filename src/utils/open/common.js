@@ -10,7 +10,7 @@ import qs from 'qs'
 import store from '@/store/index'
 import router from '@/router'
 // eslint-disable-next-line
-import CryptoJS from 'crypto-js'
+// import CryptoJS from 'crypto-js'
 // eslint-disable-next-line
 let debounceNum = 0
 /**
@@ -1428,16 +1428,16 @@ export default {
   //   var hash = bcrypt.hashSync(value, bcryptSalt) // 把自己的密码(this.registerForm.passWord)带进去,变量hash就是加密后的密码
   //   return hash
   // },
-  encrypt (word, keyStr) {
-    keyStr = keyStr || 'hxcloud-client12' // 判断是否存在ksy，不存在就用定义好的key
-    var key = CryptoJS.enc.Utf8.parse(keyStr)
-    var srcs = CryptoJS.enc.Utf8.parse(word)
-    var encrypted = CryptoJS.AES.encrypt(srcs, key, {
-      mode: CryptoJS.mode.ECB,
-      padding: CryptoJS.pad.Pkcs7
-    })
-    return encrypted.toString()
-  },
+  // encrypt (word, keyStr) {
+  //   keyStr = keyStr || 'hxcloud-client12' // 判断是否存在ksy，不存在就用定义好的key
+  //   var key = CryptoJS.enc.Utf8.parse(keyStr)
+  //   var srcs = CryptoJS.enc.Utf8.parse(word)
+  //   var encrypted = CryptoJS.AES.encrypt(srcs, key, {
+  //     mode: CryptoJS.mode.ECB,
+  //     padding: CryptoJS.pad.Pkcs7
+  //   })
+  //   return encrypted.toString()
+  // },
   /**
  * 获取uuid
  * @returns {string}
@@ -1834,21 +1834,21 @@ export default {
  * @param key
  */
   getCookie (key) {
-    return Cookies.get(key)
+    // return Cookies.get(key)
   },
   /**
  * 设置 cookie
  * @param key
  */
   setCookie (key, val) {
-    return Cookies.set(key, val)
+    // return Cookies.set(key, val)
   },
   /**
  * 删除 cookie
  * @param key
  */
   removeCookie (key) {
-    return Cookies.set(key)
+    // return Cookies.set(key)
   },
   clearCookie (name) {
     var myDate = new Date()

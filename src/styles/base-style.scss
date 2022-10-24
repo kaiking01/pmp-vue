@@ -26,7 +26,7 @@ $number: 20;
   $distance: (1 * $i);
   $name: $distance;
 
-  @if ($i>0 && $i<=5) {
+  @if ($i>0 and $i<=5) {
     .mg-t#{$name} {
       margin-top: #{$distance}px !important;
     }
