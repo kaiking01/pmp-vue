@@ -7,6 +7,6 @@ window.dateList = [
   { value: '20221019', label: '2022.10.19' },
   { value: '20221020', label: '2022.10.20' },
   { value: '20221021', label: '2022.10.21' },
-  { value: '20221022', label: '2022.10.22' },
+  { value: '20221024', label: '2022.10.24' },
 ]
 /* eslint-disable */
