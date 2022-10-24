@@ -2,7 +2,7 @@
   <div class="app-container">
 
     <div class="line pd-b20">
-      <label for="">考试日期：</label>
+      <label for="">答题日期：</label>
       <el-select v-model="examDate" size="mini" placeholder="请选择" @change="selectChange">
         <el-option v-for="item in dateList" :key="item.value" :label="item.label" :value="item.value" />
       </el-select>
