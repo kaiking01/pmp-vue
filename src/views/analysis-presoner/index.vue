@@ -157,7 +157,7 @@ export default {
           return true
         }
       })
-      debugger
+      // debugger
       if (!stuData) {
         this.isNoData = true
         return
@@ -174,7 +174,7 @@ export default {
       const curRightAswer = this.$constant.rightAswerObj[this.examDate]
       let isSuccess = ''
       const tableArr = []
-      debugger
+      // debugger
       for (let i = 0; i < arr.length; i++) {
         const item = arr[i]
         if (item.answerAnalysis) {
@@ -223,7 +223,7 @@ export default {
 }
 
 .test-container {
-  padding: 20px 8px;
+  padding: 10px 8px;
   background: #eee;
   border: 1px solid #eee;
 }
