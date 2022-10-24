@@ -216,6 +216,8 @@ Each time you meet with your project sponsor, she emphasizes the need for cost c
 |*|*|正确答案：A 
 解析：知识点出处： PMBOK 6th 页码：P224 章节：6.6.1.1 绩效测量基准：使用挣值分析时，将绩效测量基准与实际结果比较，以决定是否有必要进行变更、采取纠正措施或预防措施。向发起人提供绩效测量基准，将绩效比较结果告之。
 
+==-=--=
+
 9、 一家公司开发了一种创新的，提升性能的产品设计，已启动一个项目来完成构建产品， 该项目涉及现场和远程团队。若要避免各个团队之间的沟通不畅，项目经理应该做什么？
 A company has developed an innovative, performance-enhancing product design and has launched a project to complete building the product, which involves field and remote teams.What should a project manager do to avoid poor communication between teams?
 
