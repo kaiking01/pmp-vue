@@ -7,12 +7,12 @@ var rigthAnswer = ' DCADD  A (BCE) CCB'
 var rightAnswerA = `
 d	9.4
 c	1.2.4
-a	3.1
+a	敏捷实践指南
 d	13.1.2.3
-d	6.1.2
+d	敏捷实践指南
 a	9.2.1.2
-(bce)	6.3
-c	3.1.6
+(bce)	敏捷实践指南
+c	敏捷实践指南
 c	1.2.1
 b	11.7.1.2
 `
