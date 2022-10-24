@@ -62,6 +62,7 @@ export default {
     }
   },
   created () {
+    // debugger
     this.dateList = window.dateList || this.$constant.dateList
   },
   mounted () {
