@@ -57,7 +57,7 @@
           </div>
         </div>
 
-        <div class="text-wrap mg-t20">
+        <div class="text-wrap mg-t10">
           <ul class="ul">
             <li v-for="item of testList" :key="item.stuName" class="li">
               <div class="test-content">
