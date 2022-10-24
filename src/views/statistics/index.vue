@@ -3,16 +3,15 @@
 
     <div class="line pd-b20">
       <label for="">考试日期：</label>
-      <el-select size="mini" v-model="examDate" placeholder="请选择" @change="selectChange">
-        <el-option v-for="item in dateList" :key="item.value" :label="item.label" :value="item.value">
-        </el-option>
+      <el-select v-model="examDate" size="mini" placeholder="请选择" @change="selectChange">
+        <el-option v-for="item in dateList" :key="item.value" :label="item.label" :value="item.value" />
       </el-select>
     </div>
 
     <div class="common-table no-edit-table">
-      <el-table :border="true" class="common-table-box" :data="tableData" style="width: 100%" height="500">
-        <el-table-column label="行号" type="index" align="center" fixed width="50"></el-table-column>
-        <el-table-column v-for="item of columns" :key="item.colName" :prop="item.colName" :label="item.label" :width="item.width" :minWidth="item.minWidth">
+      <el-table :border="true" :data="tableData" class="common-table-box" style="width: 100%" height="500">
+        <el-table-column label="行号" type="index" align="center" fixed width="50" />
+        <el-table-column v-for="item of columns" :key="item.colName" :prop="item.colName" :label="item.label" :width="item.width" :min-width="item.minWidth">
           <template slot-scope="scope">
             <!-- <CellItem :group-item="colItem" :row="scope.row" @formEvent="formEvent" /> -->
             <div v-if="item.isHtml" :class="item.class" class="flex flex-l" v-html="scope.row[item.colName]"></div>
@@ -46,10 +45,10 @@ require('echarts/lib/component/title')
 require('echarts/lib/component/legend')
 
 export default {
-  name: 'statistics',
+  name: 'Statistics',
   data () {
     return {
-      dateList: window.dateList,
+      dateList: [],
       examDate: '',
       columns: [
         { label: '姓名', colName: 'stuName', width: 120, isHtml: false },
@@ -57,10 +56,13 @@ export default {
         { label: '答案', colName: 'scoreHtml', width: 'auto', minWidth: 400, isHtml: true },
         { label: '答题次数', colName: 'stuExamNum', width: 80, isHtml: false },
         { label: '总平均分', colName: 'avg', width: 80, isHtml: false },
-        { label: '分析&建议', colName: 'analysis', width: 120, isHtml: false, isOpration: true },
+        { label: '分析&建议', colName: 'analysis', width: 120, isHtml: false, isOpration: true }
       ],
       tableData: []
     }
+  },
+  created () {
+    this.dateList = window.dateList || this.$constant.dateList
   },
   mounted () {
     // debugger
@@ -75,7 +77,6 @@ export default {
 
       // debugger
       this.initFn()
-
     })
   },
   methods: {
@@ -100,7 +101,6 @@ export default {
     },
     // 跳转分析
     jumpToDetail (row) {
-
       const query = {
         stuName: row.stuName,
         date: row.date,

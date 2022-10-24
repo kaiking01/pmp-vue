@@ -13,12 +13,19 @@ export default {
   rightAswerObj: {}, // 每次考试的正确答案
   countAllData: {}, // 统计每次答题情况（主要是分析出错情况）
   userOtherInfo: {}, // 比如考生答题次数，章节对应的题目数，答题数，正确数，错误数
-  charpterExamNum: {}, // 统计章节对应的题目总数 
+  charpterExamNum: {}, // 统计章节对应的题目总数
   subjectData: {}, // 题目数对应的考生答题情况
   chapterAnswerData: {}, // 各章节的正确答案+章节名称+章节索引
   tableOprationData: {}, // 存储表格操作记录，比如排序的toggle
   rightTdDom: null, // table head td 正确答案单元格
   subjectAllList: {}, // 所有考试的题目，按日期分
+  dateList: [
+    { value: '20221018', label: '2022.10.18' },
+    { value: '20221019', label: '2022.10.19' },
+    { value: '20221020', label: '2022.10.20' },
+    { value: '20221021', label: '2022.10.21' }
+    // { value: '20221022', label: '2022.10.22' },
+  ],
   /**
    * 章节
    */
@@ -36,7 +43,7 @@ export default {
         { label: '2.1 概述', value: 2.1 },
         { label: '2.2 事业坏境因素', value: 2.2 },
         { label: '2.3 组织过程资产', value: 2.3 },
-        { label: '2.4 组织系统', value: 2.4 },
+        { label: '2.4 组织系统', value: 2.4 }
       ]
     },
     {
@@ -46,7 +53,7 @@ export default {
         { label: '3.2 项目经理的定义', value: 3.2 },
         { label: '3.3 项目经理的影响力范围', value: 3.3 },
         { label: '3.4 项目经理的能力', value: 3.4 },
-        { label: '3.5 执行整合', value: 3.5 },
+        { label: '3.5 执行整合', value: 3.5 }
       ]
     },
     {
@@ -69,7 +76,7 @@ export default {
         { label: '5.3 定义范围', value: 5.3 },
         { label: '5.4 创建WBS', value: 5.4 },
         { label: '5.5 确认范围', value: 5.5 },
-        { label: '5.6 控制范围', value: 5.6 },
+        { label: '5.6 控制范围', value: 5.6 }
       ]
     },
     {
@@ -80,7 +87,7 @@ export default {
         { label: '6.3 排列活动顺序', value: 6.3 },
         { label: '6.4 估算活动持续时间', value: 6.4 },
         { label: '6.5 制定进度计划', value: 6.5 },
-        { label: '6.6 控制进度', value: 6.6 },
+        { label: '6.6 控制进度', value: 6.6 }
       ]
     },
     {
@@ -89,7 +96,7 @@ export default {
         { label: '7.1 规划成本管理', value: 7.1 },
         { label: '7.2 估算成本', value: 7.2 },
         { label: '7.3 制定预算', value: 7.3 },
-        { label: '7.4 控制成本', value: 7.4 },
+        { label: '7.4 控制成本', value: 7.4 }
       ]
     },
     {
@@ -97,7 +104,7 @@ export default {
       children: [
         { label: '8.1 规划质量管理', value: 8.1 },
         { label: '8.2 管理质量', value: 8.2 },
-        { label: '8.3 控制质量', value: 8.3 },
+        { label: '8.3 控制质量', value: 8.3 }
       ]
     },
     {
@@ -108,7 +115,7 @@ export default {
         { label: '9.3 获取资源', value: 9.3 },
         { label: '9.4 建设团队', value: 9.4 },
         { label: '9.5 管理团队', value: 9.5 },
-        { label: '9.6 控制资源', value: 9.6 },
+        { label: '9.6 控制资源', value: 9.6 }
       ]
     },
     {
@@ -116,7 +123,7 @@ export default {
       children: [
         { label: '10.1 规划沟通管理', value: 10.1 },
         { label: '10.2 管理沟通', value: 10.2 },
-        { label: '10.3 监督沟通', value: 10.3 },
+        { label: '10.3 监督沟通', value: 10.3 }
       ]
     },
     {
@@ -128,7 +135,7 @@ export default {
         { label: '11.4 实施定量风险分析', value: 11.4 },
         { label: '11.5 规划风险应对', value: 11.5 },
         { label: '11.6 实施风险应对', value: 11.6 },
-        { label: '11.7 监督风险应对', value: 11.7 },
+        { label: '11.7 监督风险应对', value: 11.7 }
       ]
     },
     {
@@ -136,7 +143,7 @@ export default {
       children: [
         { label: '12.1 规划采购管理', value: 12.1 },
         { label: '12.2 管理采购', value: 12.2 },
-        { label: '12.3 控制采购', value: 12.3 },
+        { label: '12.3 控制采购', value: 12.3 }
       ]
     },
     {
@@ -145,14 +152,14 @@ export default {
         { label: '13.1 识别相关方', value: 13.1 },
         { label: '13.2 规划相关方参与', value: 13.2 },
         { label: '13.3 管理相关方参与', value: 13.3 },
-        { label: '13.4 监督相关方参与', value: 13.4 },
+        { label: '13.4 监督相关方参与', value: 13.4 }
       ]
     },
     // 敏捷实践只能是最后一个，有js逻辑绑定
     {
       label: '敏捷实践指南', value: 14,
       children: [
-        { label: '敏捷实践指南', value: 14 },
+        { label: '敏捷实践指南', value: 14 }
       ]
     }
   ]

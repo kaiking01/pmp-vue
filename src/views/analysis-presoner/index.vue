@@ -1,21 +1,21 @@
 <template>
   <div class="app-container scroll-bar">
 
-    <div class="user-info" id="userInfoDom">
+    <div id="userInfoDom" class="user-info">
       <div class="line flex flex-l">
         <div class="label-cls">姓名：</div>
-        <div class="value-cls">{{queryParam.stuName}}</div>
+        <div class="value-cls">{{ queryParam.stuName }}</div>
       </div>
       <div class="line flex flex-l">
         <div class="label-cls">答题次数：</div>
-        <div class="value-cls">{{queryParam.stuExamNum}}</div>
+        <div class="value-cls">{{ queryParam.stuExamNum }}</div>
       </div>
     </div>
 
     <div class="common-table no-edit-table">
-      <el-table :border="true" class="common-table-box" :data="tableData" style="width: 100%" :row-class-name="tableTrCls">
-        <el-table-column label="行号" type="index" align="center" fixed width="50"></el-table-column>
-        <el-table-column v-for="item of columns" :key="item.colName" :prop="item.colName" :label="item.label" :width="item.width" :minWidth="item.minWidth">
+      <el-table :border="true" :data="tableData" :row-class-name="tableTrCls" class="common-table-box" style="width: 100%">
+        <el-table-column label="行号" type="index" align="center" fixed width="50" />
+        <el-table-column v-for="item of columns" :key="item.colName" :prop="item.colName" :label="item.label" :width="item.width" :min-width="item.minWidth">
           <template slot-scope="scope">
             <!-- <CellItem :group-item="colItem" :row="scope.row" @formEvent="formEvent" /> -->
             <div v-if="item.isHtml" :class="item.class" class="flex flex-l" v-html="scope.row[item.colName]"></div>
@@ -33,9 +33,8 @@
 
       <div class="line">
         <label for="">考试日期：</label>
-        <el-select size="mini" v-model="examDate" placeholder="请选择" @change="selectChange">
-          <el-option v-for="item in dateList" :key="item.value" :label="item.label" :value="item.value">
-          </el-option>
+        <el-select v-model="examDate" size="mini" placeholder="请选择" @change="selectChange">
+          <el-option v-for="item in dateList" :key="item.value" :label="item.label" :value="item.value" />
         </el-select>
       </div>
 
@@ -43,31 +42,30 @@
       <template v-if="!isNoData">
         <div class="line flex flex-l">
           <div class="label-cls">本次答题正确率：</div>
-          <div class="value-cls right-score" :class="curRatio>60 ? 'font-blue' : 'font-red'">{{curRatio}}</div>
+          <div :class="curRatio>60 ? 'font-blue' : 'font-red'" class="value-cls right-score">{{ curRatio }}</div>
         </div>
 
         <div class="line flex flex-l">
           <div class="label-cls">考生原答案：</div>
-          <div class="value-cls pd-l10">{{originAnswer}}</div>
+          <div class="value-cls pd-l10">{{ originAnswer }}</div>
         </div>
 
         <div class="line flex flex-l">
           <div class="label-cls">只看错题：</div>
           <div class="value-cls">
-            <el-switch v-model="isViewErr" active-color="#13ce66" inactive-color="#ddd" @change="viewErrchange">
-            </el-switch>
+            <el-switch v-model="isViewErr" active-color="#13ce66" inactive-color="#ddd" @change="viewErrchange" />
           </div>
         </div>
 
         <div class="text-wrap mg-t20">
           <ul class="ul">
-            <li class="li" v-for="item of testList" :key="item.stuName">
+            <li v-for="item of testList" :key="item.stuName" class="li">
               <div class="test-content">
-                <pre>{{item.subject}}</pre>
+                <pre>{{ item.subject }}</pre>
               </div>
-              <div class="stu-answer" :class="item.class">考生答案：{{item.stuAnswer}}</div>
+              <div :class="item.class" class="stu-answer">考生答案：{{ item.stuAnswer }}</div>
               <div class="test-answer">
-                <pre>{{item.answerAnalysis}}</pre>
+                <pre>{{ item.answerAnalysis }}</pre>
               </div>
             </li>
           </ul>
@@ -87,7 +85,7 @@ export default {
   data () {
     return {
       isNoData: false, // 当前日期是否有答题
-      dateList: window.dateList,
+      dateList: [],
       isViewErr: true,
       curRatio: 0,
       originAnswer: '',
@@ -104,6 +102,7 @@ export default {
     }
   },
   created () {
+    this.dateList = window.dateList || this.$constant.dateList
     this.queryParam = this.$route.query
     this.examDate = this.queryParam.date
 
@@ -123,7 +122,7 @@ export default {
       return cls
     },
     viewErrchange () {
-      // debugger 
+      // debugger
       this.initTestData()// 初始化表格数
     },
     // 考试日期，查看题目
@@ -135,6 +134,7 @@ export default {
     },
     // 初始化表格数
     initTableData () {
+      // eslint-disable-next-line
       const { stuExamList, stuExamNum, avg } = this.$com.analyzeStuAll({ stuName: this.queryParam.stuName }) // 统计考生多次答题情况，按章节划分
       stuExamList.forEach(row => {
         row.succAndErr = `${row.successNum} / ${row.errNum}`
@@ -199,7 +199,6 @@ export default {
           item.stuAnswer = stuAnswer
           item.rightAnswer = rightAnswer
           tableArr.push(item)
-
         }
       }
       // debugger
@@ -208,7 +207,6 @@ export default {
   }
 }
 </script>
-
 
 <style scoped lang="scss">
 @import '~@/styles/variables.scss'; // css变量
