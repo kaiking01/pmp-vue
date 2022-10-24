@@ -1,9 +1,9 @@
 {
-  "name": "qy-cloud",
+  "name": "pmp-vue",
   "version": "1.0.0",
   "private": true,
   "author": {
-    "name": "quanYouPC"
+    "name": "kaiking"
   },
   "description": "",
   "license": "MIT",
@@ -17,6 +17,7 @@
     "precommit": "lint-staged",
     "svgo": "svgo -f src/icons/svg --config=src/icons/svgo.yml"
   },
+  "homepage": "https://[kaiking01].github.io/pmp-vue",
   "lint-staged": {
     "src/**/*.{js,vue}": [
       "eslint --fix",
