@@ -12,10 +12,8 @@
 // const $constant.subjectAllList = {} // 所有考试的题目，按日期分
 
 import $constant from '@/utils/open/constant'
-import $common from '@/utils/open/common'
+// import $common from '@/utils/open/common'
 import $validate from '@/utils/open/validate'
-
-
 
 const regSecialSymbols = /(\n|\r|\r\n|↵)/g // 正则：换行符等
 
@@ -31,13 +29,14 @@ export default {
     // let charpterNum = 0
     arr.forEach(o => {
       if (o && !regSecialSymbols.test(o)) {
-        let val = o.split(/\s/g)
+        const val = o.split(/\s/g)
         // console.log('1.',o);
-        const charpterNum = val[1]  // 章节序号
+        const charpterNum = val[1] // 章节序号
         // debugger
 
         // 注意：章节数是从1开始，索引是从0开始
         let firstN = charpterNum.split('.')[0]
+        // eslint-disable-next-line
         if (firstN == '敏捷实践指南') { // 敏捷没有章节数
           // debugger
           firstN = $constant.chapterList.length
@@ -59,7 +58,6 @@ export default {
           answer: val[0].toUpperCase(),
           chapter: charpterNum
         })
-
       }
     })
     // debugger
@@ -75,6 +73,7 @@ export default {
 
       // debugger
       this.loadScript(src, value, () => {
+        // eslint-disable-next-line
         const { tableData } = this.initData({ allData, testQuestion }, { rigthAnswer, rightAnswerA, curDate: value })
         // debugger
         $constant.loadAllData[value].tableData = tableData
@@ -92,7 +91,7 @@ export default {
     // const letterReg = /\((.+?)\)[A-Z|a-z]+/g // 英文字母正则匹配
 
     if (!$validate.isNull(str)) { // 不能为空
-      const regex1 = /(?<=\(|\（)(.+?)(?=\)|\）)/g; // 是否存在中英文括号
+      const regex1 = /(?<=\(|\（)(.+?)(?=\)|\）)/g // 是否存在中英文括号
       // const letterReg = /\((.+?)\)|\（(.+?)\）|[A-Z|a-z]+/g // 英文字母正则匹配
       // const letterReg = /[\(|\（](.+?)[\)|\）] | [A-Z|a-z]+/g // 英文字母正则匹配
       const letterReg = /(\(|\（)(.+?)(\)|\）)|[A-Z|a-z]+/g // 中英文括号+英文字母正则匹配
@@ -102,7 +101,6 @@ export default {
       if ($validate.isNull(rightArr)) {
         return rigthList
       }
-
 
       if (regex1.test(str)) { // 存在中英文括号(是多选的情况)
         // debugger
@@ -116,22 +114,21 @@ export default {
         const reg22 = /(?<=\（)(.+?)(?=\）)/g // 中文
         const reg33 = /(\(|\（)(.+?)(\)|\）)/g // 中文 + 英文 括号混合
         rightArr.forEach(o => {
-
-          let t1 = reg1.test(o) // 是否存在 英文
-          let t2 = reg2.test(o) // 是否存在 中文
-          let t3 = reg33.test(o) //  中文 + 英文 括号混合
+          const t1 = reg1.test(o) // 是否存在 英文
+          const t2 = reg2.test(o) // 是否存在 中文
+          const t3 = reg33.test(o) //  中文 + 英文 括号混合
 
           if (t1) { // 英文
-            let v1 = o.match(reg11).map(r => r.toUpperCase())
+            const v1 = o.match(reg11).map(r => r.toUpperCase())
             rigthList = rigthList.concat(`(${v1})`)
             // debugger
           } else if (t2) { // 中文
-            let v2 = o.match(reg22).map(r => r.toUpperCase())
+            const v2 = o.match(reg22).map(r => r.toUpperCase())
             rigthList = rigthList.concat(`(${v2})`)
             // debugger
           } else if (t3) { // 中英文括号混合（多选题）
             // let v3 = o.replace(/[\(\（\(\）]/g, '') // 把中英文括号替换掉
-            let v3 = o.replace(/[\（]/g, '(').replace(/[\）]/g, ')') // 把中文括号替换掉
+            const v3 = o.replace(/[\（]/g, '(').replace(/[\）]/g, ')') // 把中文括号替换掉
             rigthList.push(v3.toUpperCase())
             // debugger
           } else {
@@ -145,12 +142,11 @@ export default {
             // debugger
           }
         })
-
       } else { // 没有中英文括号
         try {
           rigthList = rightArr.join('').split('').map(o => o.toUpperCase()) // 统一转大写
         } catch (error) {
-          console.error(error);
+          console.error(error)
           // debugger
         }
       }
@@ -167,7 +163,7 @@ export default {
     const list3 = []
     // debugger
     list2.forEach((o, i) => {
-      let arr = o.split('|*|*|').map(a => a.replace(/^\s*|\s*$/g, "")) // 拆分题目和答案，并且剔除开头和末尾空字符
+      const arr = o.split('|*|*|').map(a => a.replace(/^\s*|\s*$/g, '')) // 拆分题目和答案，并且剔除开头和末尾空字符
       const obj = {
         subjectIndex: i,
         subject: arr[0], // 题目
@@ -185,7 +181,7 @@ export default {
     // console.log('1.initData');
     const data = allData
     let curCharpterAnswerList = [] // 本次章节答题数据
-    let newRightArr = this.execuAnswerbrackets(rigthAnswer)
+    const newRightArr = this.execuAnswerbrackets(rigthAnswer)
     if (!$constant.rightAswerObj[curDate]) {
       $constant.rightAswerObj[curDate] = newRightArr
     }
@@ -194,7 +190,6 @@ export default {
     // console.log('$constant.subjectAllList', $constant.subjectAllList);
     // console.log('curDate', curDate);
     // debugger
-
 
     // 题目的正确答案，和对应的章节
     if (!$constant.chapterAnswerData[curDate]) {
@@ -207,7 +202,6 @@ export default {
       // debugger
       $constant.chapterAnswerData[curDate] = curCharpterAnswerList
     }
-
 
     // 题目数对应的考生答题情况
     if (!$constant.subjectData[curDate]) {
@@ -252,7 +246,7 @@ export default {
         try {
           stuNameAndAnswerArr = originData.replace(regSecialSymbols, '').split(' ') // 每个学生接龙的数据，拆成数组： [序号，名字，答案]
         } catch (error) {
-          console.error(error);
+          console.error(error)
           // debugger
         }
         // console.log(stuNameAndAnswerArr.length, stuNameAndAnswerArr);
@@ -268,8 +262,6 @@ export default {
           $constant.userOtherInfo[stuName].examNum++
         }
 
-
-
         // 名字为空
         if ($validate.isNull(stuName)) {
           //   debugger
@@ -280,11 +272,10 @@ export default {
         // debugger
         const arr1111 = stuNameAndAnswerArr.reverse() // 取反后，从末尾取答案。
         // debugger
-        // 
+        //
         // console.log(stuNameAndAnswerArr);
-        let studentAnswerList = [] // 获取考生答案
+        const studentAnswerList = [] // 获取考生答案
         if (!stuScoreData[stuName]) { // 按名字统计，避免重复
-
           // debugger
           arr1111.some(a => {
             let str = a
@@ -298,7 +289,7 @@ export default {
               // debugger
             }
 
-            let asList = this.execuAnswerbrackets(str)
+            const asList = this.execuAnswerbrackets(str)
             // debugger
 
             // $constant.loadAllData
@@ -316,7 +307,6 @@ export default {
             }
           })
 
-
           // debugger
           if (studentAnswerList.length > 0) {
             // studentAnswerList = studentAnswerList.join('').split('').map(o => o.toUpperCase()) // 统一转大写
@@ -332,7 +322,6 @@ export default {
               // debugger
               let error = 'error-cls'
 
-
               let curChapter = null
               let chaNum = 100 // 章节号（若有100章节号，则说明有错）
               // debugger
@@ -344,10 +333,10 @@ export default {
                   // debugger
                   cha1 = anCha.chapter.split('.')
                 } catch (error) {
-                  console.error(error);
+                  console.error(error)
                 }
 
-
+                // eslint-disable-next-line
                 if (cha1 == '敏捷实践指南') {
                   // debugger
                   curChapter = $constant.chapterList[$constant.chapterList.length - 1] // 章节
@@ -358,7 +347,6 @@ export default {
                   curChapter = $constant.chapterList[chaNum] // 章节
                 }
               }
-
 
               if (!$constant.countAllData[curDate]) {
                 $constant.countAllData[curDate] = {}
@@ -373,9 +361,6 @@ export default {
                   curChapter
                 }
               }
-
-
-
 
               // debugger
               $constant.countAllData[curDate][chaNum].allNum++
@@ -394,18 +379,16 @@ export default {
 
                 error = ''
               } else { // 答错
-
                 $constant.subjectData[curDate][i].errNum++ // 统计每道题目，答对答错人数
                 // debugger
                 $constant.countAllData[curDate][chaNum].errorNum++
-
               }
 
               // $constant.analysisUserData
               // debugger
               this.countErrNum({ curDate, stuName, curChapter, isSuccess }) // 统计 每个人错对应的章节
               // debugger
-              // 
+              //
               scoreHtml += `<span class="score-cls ${error}" title="第${i + 1}题">${stuVal || 'x'}</span>`
             })
             // console.log(studentAnswerList);
@@ -419,12 +402,10 @@ export default {
               score: score / newRightArr.length * 100 + '%'
             }
           }
-
         } else { // 监听重复名字
           // , originData, stuScoreData
           console.error('学生名字重复了', curDate, 'stuName:', stuName)
         }
-
 
         // $constant.loadAllData
         // $constant.countAllData
@@ -442,13 +423,13 @@ export default {
               // debugger
               $constant.chapterList.forEach(chapterItem => {
                 const cpIndex = chapterItem.value
-                const dd = analyseData[cpIndex]
+                // const dd = analyseData[cpIndex]
                 if (!analyseData[cpIndex]) {
                   // console.log(stuName, 'cpIndex', cpIndex);
                   analyseData[cpIndex] = {
                     chapter: chapterItem,
                     errNum: 0,
-                    successNum: 0,
+                    successNum: 0
                   }
                 }
                 // debugger
@@ -458,9 +439,6 @@ export default {
         } catch (error) {
           debugger
         }
-
-
-
       }
     })
 
@@ -530,9 +508,8 @@ export default {
   },
   // 统计考生多次答题情况，按章节划分
   analyzeStuAll ({ stuName }) {
-
     let stuExamNum = 0 // 答题次数
-    let stuExamData = {} // 按章节，统计考生所有答题
+    const stuExamData = {} // 按章节，统计考生所有答题
     const allExam = $constant.analysisUserData[stuName] // 按考生姓名
     let stuExamList = []
     // debugger
@@ -575,8 +552,6 @@ export default {
         obj.successRatio = 0
         otherList.push(obj)
       }
-
-
     }
 
     // 按成功率更高排序
@@ -599,8 +574,9 @@ export default {
     }
   },
   // 表格列排序
-  tableSortFn (colName) {
+  tableSortFn (colName, curDate) {
     // curDate
+    // eslint-disable-next-line
     const { tableData } = $constant.loadAllData[curDate]
     if (!$constant.tableOprationData[curDate]) {
       $constant.tableOprationData[curDate] = {}
@@ -624,11 +600,10 @@ export default {
       })
     }
 
-    $constant.tableOprationData[curDate][colName].sortIsUp = !$constant.tableOprationData[curDate][colName].sortIsUp;
+    $constant.tableOprationData[curDate][colName].sortIsUp = !$constant.tableOprationData[curDate][colName].sortIsUp
     // debugger
     this.initTableDom1(tableData, { curDate: curDate })
   },
-
 
   initTableDom (arr, { tbodyDom, curDate }) {
     tbodyDom = tbodyDom || document.querySelector('#tbodyDom')
@@ -643,7 +618,7 @@ export default {
     // debugger
     tbodyDom = tbodyDom || document.querySelector('#tbodyDom')
     let bodyStr = ''
-    // 
+    //
     // 表头 单元格 正确答案
     let rightAnswerHtml = ''
     const curRightList = $constant.chapterAnswerData[curDate]
@@ -661,7 +636,6 @@ export default {
     // $constant.chapterAnswerData
     // $constant.subjectData
     // $constant.analysisUserData
-
 
     // 参与答题次数
     // 平均分
@@ -682,8 +656,8 @@ export default {
             <td class="td"><button onClick="jumpToDetail(this)" data-index="${i}" data-date="${row.date}">查看分析</button></td>  
           </tr>
         `
-      //  <td class="td"></td>  
-      //  <td class="td"><button onClick="jumpToDetail(this)" data-index="${i}" data-date="${row.date}">查看分析</button></td>  
+      //  <td class="td"></td>
+      //  <td class="td"><button onClick="jumpToDetail(this)" data-index="${i}" data-date="${row.date}">查看分析</button></td>
     })
     tbodyDom.innerHTML = bodyStr
   },
@@ -729,7 +703,6 @@ export default {
     }
 
     head.appendChild(scriptDom)
-
-  },
+  }
 
 }

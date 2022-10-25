@@ -4,14 +4,14 @@ var rigthAnswer = 'BBCAD  CAB(ABDE)A'
 
 var rightAnswerA = `
 b	敏捷实践指南
-b	 
+b	敏捷实践指南
 c	敏捷实践指南
 a	6.6.3.5
 d	9.5.2.1
 c	敏捷实践指南
 a	12.2.2.5
 b	4
-abde	敏捷实践指南
+abde 敏捷实践指南
 a	敏捷实践指南
 `
 
