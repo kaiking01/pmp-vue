@@ -1,18 +1,18 @@
 
 /** 正确答  */
-var rigthAnswer = ' CAACC  BDCBC'
+var rigthAnswer = 'BBCAD  CAB(ABDE)A'
 
 var rightAnswerA = `
-c	8.2.2.5
-a	4.6
-a	4.2.2.4
-c	7.2.2.2
-c	12.3.2.5
-b	4.3.2.1
-d	12.3.2.3
+b	敏捷实践指南
+b	 
 c	敏捷实践指南
-b	13.2
-c	13
+a	6.6.3.5
+d	9.5.2.1
+c	敏捷实践指南
+a	12.2.2.5
+b	4
+abde	敏捷实践指南
+a	敏捷实践指南
 `
 
 /** 接龙数据 */
@@ -80,184 +80,216 @@ var allData = `
  * **/
 var testQuestion = `
 
-1、  在一个公路施工项中，最近出现了返工的情况，导致项目经理非常担心项目的不一致性成本。项目经理来寻求你的帮助。你能给他的最好的建议是？
-In a road construction project, the rework that happened lately makes the project manager very concerned about the inconsistency cost of no-conformance. The project manager turns to you for help. What is the best advice you can offer?
+1、  一个开发新药的安全性和有效性可视化的项目正在进行中。Scrum被选为开发方法。在第三次冲刺的中途，项目团队成员发现所提供的数据缺少一个强制性参数。在项目计划期间，获得不完整数据的风险被提前识别并记录在风险登记册中。什么时候是使这个问题浮出水面的最合适的方法？
+A project to develop visualizations of the safety and efficacy of a new drug is underway. Scrum has been selected as the development approach. Midway into the third sprint, a project team member finds that the data provided is missing a mandatory parameter. The risk of getting incomplete data was identified and recorded in the risk register earlier, during project planning. When would be the most appropriate approach to surface this problem?
 
- A ：重新进行规划质量管理过程 To re-plan the quality management process
+ A ：问题应作为主题包含来在下次冲刺回顾上进行讨论 The problem should be included as a topic for discussion at the next sprint retrospective.
 
- B ：加强质量控制 To strengthen the quality control
+ B ： 团队成员应在每日Scrum会议上将问题作为障碍提出来 The team member should raise the issue as an impediment during the daily scrum meeting.
 
- C ：开展质量审计 To perform quality audit
+ C ：在冲刺审查中应演示具有缺失参数的产品增量 The product increment with the missing parameter should be demonstrated at the sprint review.
 
- D ：开展标杆对照 To carry out benchmarking control
-
-|*|*|正确答案：C 
-解析：知识点出处： PMBOK 6th 页码：P295 章节：8.2.2.5 审计：采取后续措施纠正问题，可以降低质量成本，并提高发起人或客户对项目产品的接受度。 审计可以降低质量成本。
-
-
-==-=--=
-
-
-2、 一家公司已与一家水电站签订了软件开发合同。项目管理计划指定Scrum作为开发方法。在项目的几次冲刺阶段，监管机构通知执行机构，由于新的环境法，原本不包括在范围基准中的安全功能将需要被内置到软件中。项目经理的最佳行动方案是什么？
-A company has been contracted to develop software for a hydroelectric plant. The project management plan specifies Scrum as the development approach. Few sprints into the project, regulators notify the performing organization that due to new environmental laws, safety features originally not included in the scope baseline will need to be built into the software. What is the project manager's best course of action?
-
- A ： 发出变更请求以更新项目管理计划，一旦获得批准，确保范围基准得到更新 Issue a change request to update the project management plan and, once approved, ensure that the scope baseline is updated
-
- B ：与产品负责人进行根本原因分析，以确定为安全功能最初未包含在范围中的原因 Conduct a root cause analysts with the product owner to determine why the safety features were not included in the scope in the first place
-
- C ：使用MoSCoW优先级模型来梳理范围基准，并将新的安全功能分类为"应具有" Use the MoSCoW model of prioritization to groom the scope baseline and categorize the new safety features as "should have"
-
- D ：在冲刺计划期间与团队讨论新功能，如果团队同意，请他们在下次冲刺中实现功能 Discuss the new features with the team during sprint planning and if the team agrees, ask them to implement the features in the next sprint
-
-|*|*|正确答案：A 
-解析：知识点出处： PMBOK 6th 页码：P113 章节：4.6 变更流程：变更提出后，先分析影响，再提交含解决措施的变更请求给 CCB 存在范围基准，说明使用了混合方法 改变了范围基准，需要提交变更请求。
-
-
-==-=--=
-
-
-3、 由于没有空，具有批准权限的相关方拒绝了参与项目开工会议的邀请。该项目时间紧迫，及时开工对于满足截止日期至关重要。项目经理应该做什么？
-Due to the lack of time, interested parties with approval authority rejected the invitation to participate in the kick-off meeting. The project is urgent, and timely start-up is essential to meet the deadline. What should the project manager do?
-
- A ： 升级上报给项目发起人 The upgrade is reported to the project sponsor
-
- B ：在没有他们参加的情况下举行项目开工会议 Hold project kick-off meeting without their participation
-
- C ：将会议重新安排在他们能够参与的时间 Reschedule the meeting at a time when they can participate
-
- D ：询问与会者以确定开工会议是否有必要 Ask participants to determine if a kick-off meeting is necessary
-
-|*|*|正确答案：A 
-解析：知识点出处： PMBOK 6th 页码：P86 章节：4.2.2.4 Kick-off 会议：项目开工会议通常意味着规 划阶段结束和执行阶段开始， 旨在传达项目目标、获得团队对项目的承诺，以及阐明每个相关方的角色和职责。规划已经结束，就等着审批后执行了，此时应尽快解决。
-
-
-==-=--=
-
-
-4、 项目经理正在制定一个项目计划。项目赞助人得知后，立即让项目经理针对项目成本开展初始粗略评估，以满足未来财政预算的需求。项目经理采用下列哪一项评估项目成本？
-The project manager is developing a project plan, on short notice project sponsor asks the project manager to create an initial rough estimate of project cost to satisfy requirements for the upcoming fiscal budget. The project manager uses which of the following for estimating the project cost?
-
- A ：自下而上估算 Bottom-up estimating
-
- B ：三点结算 Three-point estimating
-
- C ： 类比估算 Analogous estimating
-
- D ：建立参数模型 Parametric modeling
-
-|*|*|正确答案：C 
-解析：知识点出处： PMBOK 6th 页码：P244 章节：7.2.2.2 成本类比估算使用以往类似项目的参数值或属性来估算。项目的参数值和属性包括 （但不限于）范围、成本、预算、持续时间和规模指标， 类比估算以这些项目参数值 或属性为基础来估算当前项目的同类参数或指标。一般题目中出现粗略、需要快速估算、量级字眼，都是选 择类比估算
-
-
-==-=--=
-
-
-
-5、  项目经理希望在新项目中使用一名特定供应商。该供应商目前正在为项目经理管理的另一个项目工作。项目经理希望在开始为新项目工作之前，先完成当前项目。在供应商开始为新项目工作之前，项目经理应该做什么？
-The project manager wants to use a specific vendor in the new project. The vendor is currently working on another project managed by the project manager. The project manager wants to complete the current project before starting work on the new project. What should the project manager do before the vendor starts working on the new project?
-
- A ：与供应商一起评审合同协议。 Review contract agreements with suppliers
-
- B ：更新采购文档。 Update purchase document
-
- C ：执行采购审计。 Perform procurement audits
-
- D ：要求供应商完成所有现有工作。 Require suppliers to complete all existing work
-
-|*|*|正确答案：C 
-解析：知识点出处： PMBOK 6th 页码：P498 章节：12.3.2.5 采购审计：审计是对采购过程的结构化审查。应该在采购合同中明确规定与审计有关的权利和义务。买方的项目经理和卖方的项目经理都应该关注审计结果，以便对项目进行必要调整。注意题干中提到的问题的逻辑关系
-
-
-==-=--=
-
-
-6、  项目经理加入一个项目，但项目经理在该项目所涉及的行业经验有限，在该项目的整个生命周期中，项目经理精心记录每个差距、问题和不一致性。但是，无论项目经理如何记录和跟踪生产问题，但问题都没有得到解决，这使项目交付面临风险。 若要解决这些问题，项目经理事先应该做什么？
-A project manager joins a project in an industry with which they have limited experience.Throughout the project's life cycle,the project manager meticulously documents each gap, problem,and inconsistency.However,production issues remain ,unresolved；regardless of the project manager's efforts to record and track them,which puts project delivery at risk. What should the project manager have done to resolve these issues?
-
- A ：调整范围基准和项目进度计划与客户需求保持一致 Aligned the scope baseline and project schedule to the customer's needs
-
- B ：使用主题专家(SMEs)提供适合的应对行动 Used subject matter experts(SMEs) to provide suitable response actions
-
- C ：审查相关方的需求与验收标准相匹配 Reviewed stakeholder requirements to match the acceptance criteria
-
- D ：检查需求跟踪矩阵，以确保它与可交付成果相联系 Examined the requirements tractability matrix to insure that it linked to the deliverables.
+ D ：已实现的风险应触发并由规划风险应对过程解决 The realized risk should trigger and be addressed by the Plan Risk Responses process.
 
 |*|*|正确答案：B 
-解析：知识点出处： PMBOK 6th 页码：P94 章节：4.3.2.1 • 关于项目所在的行业以及项目关注的领域的技术知识； • 成本和预算管理； • 法规与采购； • 法律法规； • 组织治理。 看到行业领域的事情，一般都找专家判断。
+解析：知识点出处： 敏捷实践指南 页码：P53 章节：5.2.4 每日站会：• 上次站会以来我都完成 了什么？ • 从现在到下一次站会， 我计划完成什么？ • 我的障碍（或风险或 问题）是什么？ 每日站会会提出问题或风险或障碍
 
 
 ==-=--=
 
 
-7、  项目经理正在领导一个高度敏感的政府项目，按时交付该项目至关重要。第三方供应商按时交付一个关键项目组件，但不满足规范要求。目前尚不清楚交付的组件是否会按照批准的项目设计进行。项目经理应该做什么？
-The project manager is leading a highly sensitive government project, and delivering the project on time is critical. A third-party vendor delivered a critical project component on time, but did not meet the specification requirements. It is unclear whether the delivered components will follow the approved project design.What should the project manager do?
 
- A ：接受该组件并按时交付该项目 Accept the component and deliver the project on time
+2. 公司聘用一名项目经理来协调一个期限紧迫的敏捷项目，项目经理和敏捷团队都由一位项目组合经理管理，该项目组合经理倾向于根据需要将开发人员重新分配给其他紧急事项，当项目经理与其接洽时，项目组合经理坚持认为他们有权根据需要调动资源，项目经理应该怎么做？ A Company hires a project manager to coordinate an agile project with tight deadlines, The project managers and the agile team are all managed by a portfolio manager who has a tendency to reassigned developers to other urgent items as needed, when approached by the project manager , the portfolio manager is adamant that they have the authority to more required, what should the project manager do?
 
- B ：要求退还该项目的款项，并告知相关方该延迟情况 Request a refund of the project and inform the parties of the delay
+A: 将此问题提升为问题日志中的问题 Raise this ad an issue in the issue log
 
- C ：与客户协商接受不合格的组件 Negotiate with customers to accept substandard components
+B: 更新风险登记册 Update the risk register
 
- D ：拒绝该组件并重新订购，并且重新制定项目的进度计划 Reject the component and reorder, and re-schedule the project
+C: 将此问题升级上报给项目组合经理的主管 Escalate it to the portfolio manager's supervisor
 
-|*|*|正确答案：D 
-解析：知识点出处： PMBOK 6th 页码：P498 章节：12.3.2.3 绩效审查 ：对照协议，对质量、资源、进度和成本绩效进行测量、比较和分析， 以审查合同工作的绩效。其中包括确定工作包提前或落后于进度计划、超出或低于预算，以及是否存在 资源或质量问题。质量不合格，退了重新定。
+D: 请求额外的资源 Request additional resources
+
+|*|*|正确答案 B
+解析：相关方的错误认识将可能给项目带来麻烦，是潜在的（尚未发生问题），更像风险而不是问题。A的“提升”不合适。组合经理的做法对本项目而言是一种风险,需要更新到风险登记册并分析\制定应对措施。 
 
 
 ==-=--=
 
 
-8、  作为向敏捷转变的一部分，一个组织为一个项目选择一个试点团队来开发一个软件工具。一位敏捷教练被分配到团队中，在整个过渡过程中指导他们。在最初的几次迭代中，教练与项目经理和团队一起指导他们进行敏捷实践，并将任务分配给团队成员。敏捷教练采用什么最佳行动方案来确定团队是否获得了在没有教练的情况下执行即将到来的迭代所需的技能？
-As part of its transformation to agile, an organization selects a pilot team for a project to develop a software tool. An agile coach is assigned to the team to guide them throughout their transition. For the first few iterations, the coach works with the project manager and team to coach them on agile practices and assign tasks to the team members. What is agile coach's best course of action to determine if the team has acquired the required skills to perform the upcoming iterations without coaching?
+3. 一个在地理位置上分散的团队正在从事一个IT项目，他们发现自己会改写彼此的代码,有时还会处理相同的功能，Scrum主管正在评估他们如何能够促进团队成员之间更加一致的沟通，从而避免这些问题，Scrum主管应该怎么做？ A geographically dispersed team working on an IT project find themselves overwriting each others’ code and sometimes working on the same features The Scrum master is assessing ways in which they can promote more consistent communication among team members to avoid these issues. What should the Scrum master do?
 
- A ：参加每日站会 Attend daily standup meetings
+A: 举行冲刺评审 Hold a sprint review
 
- B ：进行产品演示 Conduct product demonstrations
+B: 召开回顾总结会议 Convene a retrospective
 
- C ： 举行迭代回顾 Hold iteration retrospectives
+C: 安排每日站会 Schedule a daily stand up 
 
- D ：开展团队建设活动 Carry out team building activities
+D: 开发一个任务分配系统 Develop a task allocation system
+
+|*|*|正确答案C
+解析：题干已经认为是沟通问题,与C关系更大。A主要用于检查完成的工作；B主要用于总结经验和改进；C可以讨论问题，有异常及时纠正；D与沟通无关。
+敏捷相关知识整理：
+Scrum 是最受欢迎的敏捷技术，超过 50%以上的项目在运用这项方法。Scrum Master 负责确保所有人都能正确地理解并实施 Scrum。因此，Scrum Master 要确保 Scrum 团队遵循 Scrum 的理论、实践和规则。Scrum Master 是 Scrum 团队中的服务型领导。Scrum Master 帮助 Scrum 团队外的人员了解他们如何与 Scrum 团队交互是有益的，通过改变他们与 Scrum 团队的互动方式来最大化 Scrum 团队所创造的价值。
+
+
+==-=--=
+
+
+4. 在一次迭代结束时，一位团队成员告诉项目经理，由于几天前出现了无法解决的问题， 一个计划任务未完成。若要在将来避免这种情况，项目经理应该怎么做？ At the end of an iteration, a team member tells the project manager that a planned task is unfinished because of an issue that appeared several days ago but unable to be resolved. What  should the project manager do to prevent this type of situation in the future?
+
+A: 在回顾总结会议上讨论该问题 Discuss the issue during the retrospective
+
+B: 在演示中说明该问题 Address the issue in the demo
+
+C: 在下一次迭代规划会上讨论该问题 Discuss the issue during the next iteration planning meeting
+
+D: 在下一次迭代每日站立会上审查该问题 Review the issue in the next daily standup meeting
+
+
+|*|*|正确答案A
+解析：pmbok6的230页6.6.3.5项目文件更新：避免未来发生，要总结经验教训并更新到组织过程资产中。A 是总结经验教训。
+迭代：产品大框架和范围确定，产品细节需要进一步细化通过一系列重复循环活动和过程来完善和清晰化产品，每次迭代产生一个原型，通过多次迭代生成最终产品。
+敏捷知识点，冲刺回顾会议：是由Scrum团队的所有成员参加。这次会议的焦点是对整个迭代进行回顾。细节包括：什么进行顺利，缺少什么，需要改变什么等等。团队就未来的迭代改进计划达成一致。这个会议时间框为一个月的迭代，3个小时，比迭代评审时间短。总结经验教训纳入组织过程资产，在下一次迭代启动时做为输入。
+
+
+==-=--=
+
+
+5. 实践敏捷方法的开发负责人被任命为一个项目的迭代经理，该负责人与使用瀑布式方法的业务分析师密切合作，但这两个方法的差异已经开始对团队绩效产生负面影响，项目经理分别与开发负责人和业务分析师就这种情况进行会面，但未能解决问题。
+项目经理下一步应该怎么做？ A development leader, who practices agile methodology, is assigned as the iteration manager for a project.This leader works closely with a business analyst who uses the waterfall methodology. The differences in these methodologies have begun to negatively impact team performance. The project manager meets individually with the development lead and business analyst about the situation, but fails to resolve the issue.
+
+A: 与业务分析师的经理谈话 Speak with the business analyst’s manager.
+
+B: 请求提供一位具有敏捷方法经验的新业务分析师 Request a new business analyst with experience in the agile methodology. 
+
+C: 为业务分析师提供敏捷方法团队的培训 Train the business analyst on the agile methodology.
+
+D: 与业务分析师和开发负责人一起召开一次联合会议 Conduct a joint meeting with the business analyst and development team.
+
+|*|*|正确答案D
+解析：PMBOK（6）P348-9.5.2.1冲突管理-合作/解决问题。利用合作/解决问题的方法解决项目中的冲突，选项D比较合适。
+
+
+==-=--=
+
+
+6、一位敏捷教练加入了一个团队，这个团队在过去的几个月里一直致力于一个项目。教练注意到团队成员正在努力消除障碍，没有关于时间限制事件的规则，也没有使用信息发射源来显示项目状态。敏捷教练应该采取的最佳行动方案是什么？
+An agile coach joined a team that has been working on a project for the last few months. The coach noticed that the team members were struggling to remove impediments, did not have a discipline around time-boxed events, and were not using information radiators to display the project status. What is the best course of action for the agile coach to take?
+
+A： 帮助团队处理障碍，提醒时间限制的重要性，并强制团队使用信息发射源
+Help the team deal with impediments, remind of the importance of time-boxing, and force the team to use information radiators
+
+B： 告诉团队处理障碍，提醒时间限制的重要性，并建议团队使用信息发射源
+Tell the team to deal with impediments, remind of the importance of time-boxing, and suggest the team to use information radiators
+
+C： 帮助团队处理障碍，提醒时间限制的重要性，并建议团队使用信息发射源
+Help the team to deal with impediments, remind of the importance of time-boxing, and suggest the team to use information radiators
+
+D： 什么都不做，因为问题很小，可以由团队处理，因为敏捷团队是自我管理和自我组织的
+Do nothing, since the issues are minor and can be handled by the team because agile teams are self- managing and self-organizing
 
 |*|*|正确答案：C 
-解析：知识点出处：敏捷实践指南 页码：P50 章节：5.2.1 回顾总结会： 回顾是最重要的一个实践，原因是它能让团队学习、改进和调整其过程。 开始是敏捷教练分配任务，在回顾会后， 团队成员可以自组织来安排任务、 改进过程。
+解析：知识点出处：敏捷实践指南 页码：P38 章节：4.2.3 仆人式领导：在敏捷环境中，项目经理充当仆人式领导，其工作重点转变为引导需要帮助的人，促进团队的合作，保持与相关方的需要一致。 敏捷教练的重要角色，就是帮助团队清除障碍。另外，时间盒与信息发射源也是重要的敏捷工具。
 
 
 ==-=--=
 
 
-9、  一位项目团队成员在工作场所之外与项目发起人会面后,向项目经理告知该发起人的新期望。项目经理应如何解决这个问题?
-After meeting with the project sponsor outside the workplace,a project team member update the project manager on the sponsor's new expectations.How should the project manager address this?
+7、一个敏捷团队成员在开发她为当前冲刺选择的用户故事时遇到了一个技术问题。在多次尝试解决这个问题失败后，团队成员向scrum master寻求建议。对于scrum master来说，最好的行动方案是什么？
+An agile team member encounters a technical issue while developing one of the user stories she selected for the current sprint. After multiple unsuccessful attempts to resolve the issue, the team member approaches the scrum master for advice. What is the best course of action for the scrum master?
 
- A ：与团队和发起人一起审查沟通管理计划 Review the communications management plan with the team and the sponsor
+A： 请求其他团队成员一起充实用户故事并解决问题
+Request that the rest of the team members swarm on the user story
 
- B ：与发起人开会,以确认期望 Meet with the sponsor to confirm expectations
+B： 将团队成员替换为另一名更有经验的团队成员
+Replace the team member with another more experienced one
 
- C ：将发起人的期望纳入项目中 Incorporate the sponsor's expectations into the project
+C： 要求撰写用户故事的产品负责人解决问题
+Ask the product owner who wrote the user story to resolve the issue
 
- D ：指示团队成员不要与发起人讨论该项目 Instruct the team member not to discuss the project with the sponsor
+D： 建议团队成员尝试其他替代解决方案
+Recommend that the team member try other alternative solutions
+
+|*|*|正确答案：A
+解析：知识点出处：PMBOK 6th 页码：P488 章节：12.2.2.5 谈判：谈判是为达成协议而进行的讨论。采购谈判是指在合同签署之前，对合同的结构、各方的权利和义务，以及其他条款加以澄清，以便双方达成共识。最终的文件措辞应该反映双方达成的全部一致意见。谈判以签署买方和卖方均可执行的合同文件或其他正式协议而结束。 自组织团队，若遇到问题，原则上应该让团队自己处理问题。
+
+
+==-=--=
+
+
+8、你被指派领导一个敏捷项目。项目团队由经验丰富的敏捷实践者组成，他们在一起工作了很长时间。在这个敏捷的环境中，对你来说管理项目整合的最佳方法是什么？
+You have been assigned to lead an agile project. The project team is comprised of experienced agile practitioners who have been working together for a long time. In this agile environment, what is the best approach for you to take to manage project integration?
+
+A： 制定整合所有项目活动的项目管理计划
+Develop the project management plan that integrates all project activities
+
+B： 让团队确定如何整合计划和组件
+Let the team determine how plans and components should be integrated
+
+C： 寻求批准聘请外部项目整合管理专家
+Seek approval to hire an external project integration management expert
+
+D： 在敏捷环境中，项目整合管理不适用
+In agile environments, project integration management is not applicable
 
 |*|*|正确答案：B 
-解析：知识点出处： PMBOK 6th 页码：P524 章节：13.2 在管理相关方参与过程中，需要开展多项活动，例如： • 在适当的项目阶段引导相关方参与，以便获取、确认或维持他们对项目成功的持续承诺； • 通过谈判沟通管理相关方期望； • 处理与相关方管理有关的任何风险或潜在关注点，预测相关方可能在未来引发的问题； • 澄清和解决已识别的问题 通过谈判与沟通了解相关方的期望。
+解析：知识点出处：PMBOK 6th 页码：P74 章节：4 在敏捷或适应型环境中需要考虑的因素 在适应型环境下，整合管理的核心概念中所述的对项目经理的期望不变，但是把对具体的产品的规划和交付授权给团队来控制。 在成熟的敏捷环境里，项目经理是仆人式领导的角色，很多决定让自组织成员去做。
 
 
 ==-=--=
 
 
-10、  项目经理为一个具有按时完成盈利项目历史记录的组织工作。然而,由于缺乏相关方的支持以及他们未能提供信息,这些项目都经历过问题。若要避免这些问题,项目经理在新项目开始时应该做些什么?
-A project manager works for an organization with a history of completing projects on time.However,these projects have all experienced issues due to alack of stakeholder's support and their failure to provide information.What should the project manager do at the beginning of a new project to avoid these issues?
+9、在项目的第一个阶段发布给客户的最新软件充满了缺陷。客户很生气，并要求计划在第二阶段交付的新版本的开发过程更加透明。客户希望更有规律地看到团队的结果，而不需要很长的开发间隔。 项目团队可以在第二阶段引入下列哪项来更好地满足客户的要求? (选择四个）
+The latest software released to the customer in the first project phase is full of defects. The customer is angry and demands that the development of the new release, which is planned to be delivered in the second phase, is much more transparent. The customer wants to see the team’s results more regularly and without very long development intervals in-between. Which of the following could the project team introduce in the second phase to better comply with the customer's demand? (Choose four)
 
- A ：管理所有相关方的期望,并为每个人提供解决方案 Manage all stakeholder's expectation,and provide a solution for each one
+A： 有规律时间框的节奏
 
- B ：准备一份包含所有相关方的沟通管理计划 Prepare a communications management plan that includes all stakeholders
+A cadence with regular timeboxes
 
- C ： 在启动阶段识别关键相关方并进行优先级排序 Identify and prioritize the key stakeholders during the initiating stage
+B： 定期和频繁的回顾
 
- D ：复制之前项目的工作,因为这些项目结束时都很好 Duplicate efforts from previous projects since they ended well
+Regular and frequent retrospectives
 
-|*|*|正确答案：C 
-解析：知识点出处： PMBOK 6th 页码：P504 章节：13 相关方的观点：项目经理和团队正确识别并合理引导所有相关方参与的能力，能决定着项目的成败 要尽早地识别关键的相关方，因此识别相关方在启动阶段开始
+C： 在每个团队成员的层次上进行优化
+
+Optimization at the level of each individual team member
+
+D： 测试驱动的开发实践
+
+Test-driven development practices
+
+E： 使用待办事项列表进行增量交付
+
+Incremental delivery using a backlog
+
+F： 在软件发布之前限制更改的数量
+
+Limiting the number of changes before the software is released
+
+|*|*|正确答案：A,B,D,E
+解析：知识点出处：敏捷实践指南 页码：P9 章节：2.2 敏捷的12条原则 排除法 C：敏捷注重团队协作，而非单兵作战 F：敏捷拥抱变化
 
 
+==-=--=
+
+
+10、一个敏捷团队的任务是开发一款机器人。项目经理希望确保在机器人被实际建造之前，团队能够收到关于需求的早期反馈并相应地调整设计。项目经理应该使用以下哪一项来实现这个目标？
+An agile team is tasked with the development of a robot. The project manager wants to ensure that before the actual robot is built, the team receives early feedback on requirements and adapts the design accordingly. Which of the following should the project manager use to achieve that goal?
+
+A： 原型设计
+Prototyping
+
+B： 设计审查
+Design review
+
+C： 核对单
+Checklists
+
+D： 商业论证
+Business case
+
+|*|*|正确答案：A 
+解析：知识点出处：敏捷实践指南 页码：P21 章节：3.1.2 迭代型生命周期通过连续的原型或概念验证来改进产品或成果。每一个新的原型都能带来新的相关方新的反馈和团队见解。 题目中明确提到需要反馈，因此原型法比较好用。
 
 
 
