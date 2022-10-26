@@ -22,7 +22,7 @@ var allData = `
 2. @%@ BDBDD CACC (BDE) 
 5. 林海波 cdca
 7. 毅州牧 cbda
-8. 关尔.ZERO  BBCDCDACC  (ABC)
+8. 郑鸿斌  BBCDCDACC  (ABC)
 9. 开水 ABDDD DADB ACE
 10. 风 BDCCD  AADB  ACE
 11. NICOLE  BDCAC  CADC（ACE）
@@ -76,7 +76,7 @@ var allData = `
 2. @%@ BDBDD CACC (BDE) 
 5. 林海波 cdca
 7. 毅州牧 cbda
-8. 关尔.ZERO  BBCDCDACC  (ABC)
+8. 郑鸿斌  BBCDCDACC  (ABC)
 9. 开水 ABDDD DADB ACE
 10. 风 BDCCD  AADB  ACE
 11. NICOLE  BDCAC  CADC（ACE）
