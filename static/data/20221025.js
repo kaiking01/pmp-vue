@@ -43,7 +43,7 @@ var allData = `
 23. 汪关心 BBCAC BAB（ABDE）B
 24. 赵艳焜 bdcac cab（abde）a
 25. 陈庆娇 BCCDC BCD(ACDE)A
-26. 阮晓梦BBCAD CDB (ABDE)A
+26. 阮晓梦 BBCAD CDB (ABDE)A
 27. 郑鸿斌 BCCACCAB (ABDE) A
 28. 阿狸 bccdd cbb(abce)b
 29. 黄雅君 bbcad cab(abde)a
@@ -51,7 +51,7 @@ var allData = `
 31. 黄艳芬 ABCAD CAB(ABCE)A
 32. 李凯旋 BACAD CAB(ABDE)A
 33. 高桥 BACCD CAB(ABDE)A
-34. 陈雅BACAD CAB(ABDE)A
+34. 陈雅 BACAD CAB(ABDE)A
 35. 文博 BCCDD AAB（ABDE）A
 36. 陈小棋 BCCAD CAB（ABDE）A
 37. 小青 BCCAC CAA（ABDE）A
@@ -69,6 +69,14 @@ var allData = `
 49. 李勇发 BBCCD CDD(ABEF)A
 50. 盛洁 DACAC CAB(ABEF)A
 51. Ss BDCAC CDB(ADEF)A
+52. 陆婉仪 BDCAC BAB(ABDE)A
+53. 胡林宇 BCCAC   ADB(ADE)B
+54. loading BCCAD CAB(ABDE)A
+55. 秦敏 BDCDC  CAB（ACDE）A
+56. 吴洪宏 Bbcdc bdb（abde）a
+57. 慌、如隔世  BBBAD ACB(ABDE)A
+58. 旭 bdcad cab(abde)b
+59. 郭晓丽 BCCAD CDD（BDEF）A
 
 
 `
