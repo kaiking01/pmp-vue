@@ -49,7 +49,7 @@ module.exports = {
     assetsRoot: path.resolve(__dirname, `../${buildFileName}`),
     assetsSubDirectory: 'static',
     // assetsPublicPath: './pmp-vue',
-    assetsPublicPath: './',
+    assetsPublicPath: '',
 
     /**
      * Source Maps
