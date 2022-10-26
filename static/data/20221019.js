@@ -44,7 +44,7 @@ var allData = `
 27. 莫德坚 BDCDC CAAC(ABC)
 28. Wilbur- BDCDC CCCD (BCE) 
 29. Dream ABCCC  CADA(ACE)
-30. 小婉儿 ADBDD CADA(ABC)
+30. 陆婉仪 ADBDD CADA(ABC)
 31. 邱婉菡 CDCAC CBBC(ABE)
 32. 洪俊鑫 CBCDC CADC(ACE)
 33. loading ADCDD CACA（BCE）
@@ -98,7 +98,7 @@ var allData = `
 27. 莫德坚 BDCDC CAAC(ABC)
 28. Wilbur- BDCDC CCCD (BCE) 
 29. Dream ABCCC  CADA(ACE)
-30. 小婉儿 ADBDD CADA(ABC)
+30. 陆婉仪 ADBDD CADA(ABC)
 31. 邱婉菡 CDCAC CBBC(ABE)
 32. 洪俊鑫 CBCDC CADC(ACE)
 33. loading ADCDD CACA（BCE）
