@@ -67,6 +67,9 @@ var allData = `
 46. D_uende AABAC CCBAA
 47. Ss BAAAD CCBBA
 48. 秦敏 BBADC CBBAC
+49. 何文槺 BABDC CBBDC
+50. 旭 bcaac dcbdc
+51. 慌、如隔世 BAAADCCBAC
 
 
 `
