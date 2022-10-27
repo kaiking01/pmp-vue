@@ -70,7 +70,7 @@ var allData = `
 49. 邹班庆 DCCCB ABACB
 50. 王炜 CDCCD BBACB
 51. 新 DCCCD ABBDA
-52. 、拾婲。DCCCDBBADA
+52. 、拾婲。 DCCCDBBADA
 
 `
 
@@ -94,7 +94,8 @@ Discussing the on-going work and impediments to progress
 D： 寻找对团队过程的任何改进
 Looking for any improvements to the team's process
 
-|*|*| 正确答案：D 解析：知识点出处：敏捷实践指南 页码：P50 章节：5.2.1 回顾总结会： 回顾是最重要的一个实践，原因是它能让团队学习、改进和调整其 过程。 回顾会三件事：总结经验 过程改进 提出计划
+|*|*| 正确答案：D 
+解析：知识点出处：敏捷实践指南 页码：P50 章节：5.2.1 回顾总结会： 回顾是最重要的一个实践，原因是它能让团队学习、改进和调整其 过程。 回顾会三件事：总结经验 过程改进 提出计划
 
 ==-=--=
 
