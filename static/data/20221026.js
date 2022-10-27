@@ -73,7 +73,8 @@ var allData = `
 52. 雪落无痕 BDBDC CCCAC
 53. 郑舒颖 BCBAC DCBAC
 54. 陆婉仪 BBCCC BCCAC
-
+55. 陈安然 BDBDC CCBAA
+56. 阿狸 baadc bcdca
 
 `
 
