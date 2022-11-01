@@ -17,7 +17,7 @@
     "precommit": "lint-staged",
     "svgo": "svgo -f src/icons/svg --config=src/icons/svgo.yml"
   },
-  "homepage": "https://kaiking01.github.io/pmp-vue",
+  "homepage": "./",
   "lint-staged": {
     "src/**/*.{js,vue}": [
       "eslint --fix",
